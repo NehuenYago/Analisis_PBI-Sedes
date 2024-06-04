@@ -386,6 +386,8 @@ pbi_pais_sede = sql^consulta_pbi_sedes
 
 # ScatterPlot
 
+plt.figure(figsize=(10, 6))
+sns.set_style("whitegrid", {"grid.color": ".1", "grid.linestyle": ":"})
 sns.scatterplot(data=pbi_pais_sede, x='cant_sedes', y='PBI', alpha=0.9, legend=False)
 
 # Leyendas

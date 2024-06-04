@@ -19,15 +19,20 @@ Por último llegamos a la conclusión que a pesar que el PBI per cápita es un f
 
 ### Bar Chart
 
-![Bar-chart image](./Graficos/barchart.png)
+<!-- ![Bar-chart image](./Graficos/barchart.png) -->
+<img src="./Graficos/barchart.png" alt="Bar-chart image" width="700"/>
 
 ### Box Plot
 
-![Box-plot image](./Graficos/boxplot.png)
+<!-- ![Box-plot image](./Graficos/boxplot.png) -->
+<img src="./Graficos/boxplot.png" alt="Box-plot image" width="700"/>
+
 
 ### Scatter Plot
 
-![Scatter-Plot image](./Graficos/scatterplot.png)
+<!-- ![Scatter-Plot image](./Graficos/scatterplot.png) -->
+<img src="./Graficos/scatterplot.png" alt="Scatter-Plot image" width="700"/>
+
 
 ### Recortes de tablas generadas con SQL (Tablas Limpias)
 

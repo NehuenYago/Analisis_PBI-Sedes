@@ -10,10 +10,52 @@ Por último llegamos a la conclusión que a pesar que el PBI per cápita es un f
 
 - Tablas originales públicas descargadas.
 - Tablas propias generadas en 3ra forma normal con los datos necesarios para la realización del trabajo.
-- Reportes generados con SQL para comprender y analizar la relación entre las tablas propias.
+- Reportes generados con `SQL` para comprender y analizar la relación entre las tablas propias.
 - Un informe en .pdf donde se detalla el trabajo realizado, se muestran los reportes, los gráficos y la conclusión.
+- Imagenes de los gráficos del informe.
 - Archivo `main.py` donde se encuentra todo el código utilizado para limpiar las tablas originales, generar las tablas, los reportes, y los gráficos.
+
+## Graficos y recortes de las tablas generadas con SQL
+
+### Bar Chart
+
+![Bar-chart image](./Graficos/barchart.png)
+
+### Box Plot
+
+![Box-plot image](./Graficos/boxplot.png)
+
+### Scatter Plot
+
+![Scatter-Plot image](./Graficos/scatterplot.png)
+
+### Recortes de tablas generadas con SQL (Tablas Limpias)
+
+#### Tabla 2
+
+|Region                    |Paises_con_sedes_Argentinas|PBI_promedio_U$S  |
+|--------------------------|---------------------------|------------------|
+|North America             |2                          |65623.62239391456 |
+|Europe & Central Asia     |26                         |37916.702419266076|
+|East Asia & Pacific       |11                         |27876.872316966474|
+|Middle East & North Africa|12                         |24902.5189234891  |
+|Latin America & Caribbean |24                         |11877.417324235066|
+|Sub-Saharan Africa        |7                          |2459.067444021032 |
+|South Asia                |3                          |2229.3577834684565|
+
+#### Tabla 4
+
+|Pais                          |Sede|Red_Social        |URL             |
+|------------------------------|----|------------------|----------------|
+|Paraguay                      |CASUN|Instagram         |@ArgentinaEnAsuncion|
+|Brazil                        |CFLOR|Instagram         |@argenflorianopolis|
+|United States                 |CHOUS|Instagram         |@ARGenHouston   |
+|United States                 |CLANG|Instagram         |@arg_clang      |
+|United States                 |CMIAM|Instagram         |@argenmiami     |
+|Brazil                        |CPABL|consuladoargentinosp@gmail.com|consuladoargentinosp@gmail.com|
+|Italy                         |CROMA|Instagram         |@ArgEnRoma      |
+|Italy                         |CROMA|Instagram         |@consuladoargentinoenroma|
 
 ## Para ejecutar el código
 
-Utilizamos las librerías pandas, inline_sql, matplotlib y seaborn. Para ejecutar el código recomendamos el gestor de paquetes y entornos [Conda](https://docs.conda.io/en/latest/).
+Utilizamos las librerías `pandas`, `inline_sql`, `matplotlib` y `seaborn`. Recomendamos instalar el gestor de paquetes y entornos [Conda](https://docs.conda.io/en/latest/) y crear un enviroment para este proyecto. Luego ejecutar el comando `conda activate <tu-enviroment>` (reemplazar `<...>` por el nombre) y luego `conda install <nombre-libreria>` y en el caso de inline_sql `pip install inline_sql`. Finalmente `python3 main.py` o ir ejecutando celda por celda separadas en el archivo por `#%%`.

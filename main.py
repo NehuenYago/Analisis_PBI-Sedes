@@ -6,7 +6,7 @@
 # Luego, con las tablas generadas por nosotros, realizamos diferentes reportes SQL y gráficos.
 # El objetivo es estudiar si hay relación entre la cantidad de sedes diplomáticas que tiene
 # Argentina en diferentes países y los PBI de estos en el año 2022.
-
+#%%
 # Importacion de librerias que vamos a utilizar para el desarrollo del Trabajo Practico
 
 import pandas as pd
@@ -289,7 +289,7 @@ query_redes_pais = """
                     SELECT p.Pais, s.Id as Sede, r.Nombre_red as Red_Social, r.Url as URL
                     FROM red_social r
                     JOIN sede s ON r.Id_sede = s.Id
-                    JOIN pais p ON s.Iso = p.Iso
+                    JOIN pais p ON s.Id_pais = p.Id_pais
                     ORDER BY p.Pais ASC, Sede ASC, Red_Social ASC, URL ASC
                    """
 redes_sociales_por_pais = sql^query_redes_pais
@@ -386,11 +386,11 @@ pbi_pais_sede = sql^consulta_pbi_sedes
 
 # ScatterPlot
 
-plt.figure(figsize=(10, 6))
-sns.set_style("whitegrid", {"grid.color": ".1", "grid.linestyle": ":"})
-sns.scatterplot(data=pbi_pais_sede, x='cant_sedes', y='PBI', alpha=0.9, hue='Pais', legend=False, size='cant_sedes', sizes=(20, 2000))
+sns.scatterplot(data=pbi_pais_sede, x='cant_sedes', y='PBI', alpha=0.9, legend=False)
 
 # Leyendas
 plt.xlabel('Numero de Sedes')
 plt.ylabel('PBI')
 plt.title('Relacion entre el numero de Sedes y el PBI')
+
+# %%
